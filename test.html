@@ -48,8 +48,9 @@ var livingEnemies = [];
 
 function create() {
 	music = game.add.audio('boden');
-
+	music.loop = true;
 	music.play();
+	
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     //  The scrolling starfield background
