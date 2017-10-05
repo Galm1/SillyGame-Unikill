@@ -26,7 +26,7 @@ function preload() {
     game.load.spritesheet('kaboom', 'assets/games/invaders/explode.png', 128, 128);
     game.load.image('starfield', 'assets/bg1.png');
     game.load.image('background', 'assets/bg1.png');
-
+		game.load.audio('boden', ['/assets/RoccoW__xyce_-_RoccoW_en_De_Jongens_Met_de_Zwarte_Schoenenxm1.mp3']);
 }
 
 var player;
@@ -47,7 +47,9 @@ var stateText;
 var livingEnemies = [];
 
 function create() {
+	music = game.add.audio('boden');
 
+	music.play();
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     //  The scrolling starfield background
